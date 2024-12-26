@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>XiaoZhi的小站</title>
+	<link rel="stylesheet" href="css/主机版.css">
+	<link rel="stylesheet" href="css/page1.css">
+	<link rel="stylesheet" href="css/page2.css">
+	<link rel="stylesheet" href="css/page3.css">
+	<link rel="stylesheet" href="css/page4.css">
+	<link rel="stylesheet" href="css/page5.css">
+	<link rel="stylesheet" href="css/page6.css">
+	<link rel="stylesheet" href="css/newai.css">
+	<link rel="stylesheet" href="css/手机样式.css">
+	<link rel="stylesheet" href="css/contextMenu.css">
+</head>
+
+<body>
+	<img src="img/7.jpg" alt="" class="video">
+	<!-- 主体 -->
+	<div id="zhu">
+		<!-- 侧边栏 -->
+		<div class="cebianlan">
+			<!-- 头像名称 -->
+			<div class="geren">
+				<img src="img/默认头像.png" alt="" class="touxiang">
+				<p class="name">我是小稚鸭</p>
+			</div>
+			<!-- 导航栏 -->
+			<div class="daohang">
+				<a href="#home" id="page1">
+					<div>
+						<i class="i_dh home">首页</i>
+					</div>
+				</a>
+				<hr>
+				<a href="#link" id="page2">
+					<div>
+						<i class="i_dh link">链接</i>
+					</div>
+				</a>
+				<a href="#link_management" id="page3">
+					<div>
+						<i class="i_dh link_management">链接管理</i>
+					</div>
+				</a>
+				<hr>
+				<a href="#article" id="page4">
+					<div>
+						<i class="i_dh wz">文章</i>
+					</div>
+				</a>
+				<a href="#article_management" id="page5">
+					<div>
+						<i class="i_dh wz_management">文章管理</i>
+					</div>
+				</a>
+				<hr>
+				<a href="#baidu" id="page6">
+					<div>
+						<i class="i_dh baidu">百度一下</i>
+					</div>
+				</a>
+				<hr>
+				<a href="#resource_download" id="kuake">
+					<div>
+						<i class="i_dh resource_download">资源下载</i>
+					</div>
+				</a>
+				<a href="#contact" id="bilibili">
+					<div>
+						<i class="i_dh contact">联系方式</i>
+					</div>
+				</a>
+
+			</div>
+			<!-- 添加一个切换样式的按钮 用于开关<link rel="stylesheet" href="css/newai.css"> -->
+			<button class="switch-button" onclick="switchStyle()">切换样式</button>
+		</div>
+		<!-- 标题and内容1 -->
+		<div class="btandnr" id="p1">
+			<div class="biaoti">
+				<span class="bt">首页</span>
+			</div>
+			<div class="container">
+				<section id="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item"><img src="img/1.jpg" alt="Slide 1" /></div>
+						<div class="carousel-item"><img src="img/2.jpg" alt="Slide 2" /></div>
+						<div class="carousel-item"><img src="img/3.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/4.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/5.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/6.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/7.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/8.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/9.jpg" alt="Slide 3" /></div>
+						<div class="carousel-item"><img src="img/10.jpg" alt="Slide 3" /></div>
+					</div>
+					<button class="carousel-control prev" onclick="prevSlide()">
+						&#10094;
+					</button>
+					<button class="carousel-control next" onclick="nextSlide()">
+						&#10095;
+					</button>
+				</section>
+				<!-- 欢迎来到我的博客 -->
+				<div class="center-container">
+					<div class="welcome-message">欢迎来到我的博客</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 标题and内容2 -->
+		<div class="btandnr" id="p2">
+			<div class="biaoti">
+				<span class="bt">链接</span>
+				<!-- <button id="refresh-btn">刷新</button> -->
+			</div>
+			<div class="container">
+				<div class="container_h">
+					<!-- 链接 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 标题and内容3 -->
+		<div class="btandnr" id="p3">
+			<div class="biaoti">
+				<span class="bt">链接管理</span>
+			</div>
+			<div class="container">
+				<input type="text" id="catName" class="inp" placeholder="请输入网名">
+				<input type="text" id="catAge" class="inp" placeholder="请输入网址">
+				<input type="text" id="catColor" class="inp" placeholder="请输入图片路径">
+				<button id="addDataButton" class="sjk_button">添加网站</button><br>
+
+				<textarea id="jsonData" placeholder="粘贴要替换的JSON数据"></textarea><br>
+				<button id="replaceDataButton" class="sjk_button">更换数据库</button>
+
+				<button id="zhantieappend" class="sjk_button">导入默认数据库</button>
+				<button id="copyDataButton" class="sjk_button">复制我的数据库</button>
+
+				<div id="catListDisplay" class="sjck"></div>
+			</div>
+		</div>
+
+		<!-- 标题and内容4 -->
+		<div class="btandnr" id="p4">
+			<div class="biaoti">
+				<span class="bt">文章</span>
+			</div>
+			<div class="container">
+				<div id="article-view">
+					<h2 id="view-title"></h2>
+					<p id="view-content"></p>
+					<div id="comments-section">
+						<h3>评论</h3>
+						<ul id="comments-list"></ul>
+						<input type="text" id="comment-input" placeholder="添加评论">
+						<button onclick="addComment()">添加评论</button>
+					</div>
+				</div>
+				<div id="article-list"></div>
+			</div>
+		</div>
+
+		<!-- 标题and内容5 -->
+		<div class="btandnr" id="p5">
+			<div class="biaoti">
+				<span class="bt">文章管理</span>
+				<!-- <button id="load-articles-btn">加载文章</button> -->
+			</div>
+			<div class="container">
+				<div id="article-management">
+					<div id="article-list-management"></div>
+				</div>
+				<div id="article-form">
+					<input type="text" id="article-title" placeholder="文章标题">
+					<textarea id="article-content" placeholder="文章内容"></textarea>
+					<button onclick="createArticle()">创建文章</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 标题and内容6 -->
+		<div class="btandnr" id="p6">
+			<div class="biaoti">
+				<span class="bt">百度一下</span>
+			</div>
+			<div class="container">
+				<form id="searchForm" action="https://www.baidu.com/s" method="get">
+					<input type="text" name="wd" id="searchQuery" placeholder="输入搜索内容">
+					<button type="button" onclick="search()" id="searchPut">百度一下</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="touxiang" style="display: none;">
+		<img src="img/默认头像.png" alt="头像" class="touxiang">
+	</div>
+
+	<div id="success-alert">操作成功！</div>
+
+	<div id="error-alert">
+		操作失败！<br>
+		<span id="error-code"></span>
+	</div>
+	<script src="js/jquery-1.8.0.js"></script>
+	<script src="js/tongyong.js"></script>
+	<script src="js/首页内容.js"></script>
+	<script src="js/page2.js"></script>
+	<script src="js/page3.js"></script>
+	<script src="js/page4.js"></script>
+	<script src="js/page5.js"></script>
+	<script src="js/contextMenu.js"></script>
+</body>
+
+</html>

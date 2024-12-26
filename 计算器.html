@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>点击式计算器</title>
+</head>
+<style>
+    #q {
+        font-size: 30px;
+    }
+    
+    input {
+        width: 55px;
+        height: 55px;
+        margin: 4px;
+        box-shadow: -1px 2px 7px rgba(139, 69, 19, 0.5);
+        /* background: #FFFFFF; */
+        color: #000000;
+        opacity: 0.7;
+        border: #FFFFFF;
+        background-color: rgba(255, 255, 255, 0.5);
+        /* 半透明的背景颜色 */
+        backdrop-filter: blur(10px);
+/*		font-size: 14px;*/
+    }
+    
+    input:hover {
+        background: #F2DDAD;
+        border: #372E31 solid 2px;
+        color: #332B2E;
+    }
+    
+    #result {
+        width: 187px;
+    }
+    
+    #result:hover {
+        border: 0px;
+    }
+    
+    #aaa {
+        margin: 0 auto;
+        position: relative;
+        width: 300px;
+        /* 适当设置宽度 */
+        height: 450px;
+        /* 适当设置高度 */
+        padding: 40px 0px 0px 50px;
+        /* 设置内边距以留出空间 */
+         background-image: url('img/1空.jpg');
+        /* 将 'background-image.jpg' 替换为你的背景图片路径 */
+        background-size: cover;
+        /* 背景图片覆盖整个元素 */
+        background-position: center;
+        /* 图片居中 */
+/*        opacity: 0.9;*/
+        /* 设置透明度 */
+        border: #5A4449 solid 2px;
+        border-radius: 10px;
+        /* background-color: rgba(255, 255, 255, 0.4);/* 半透明的背景颜色 */
+        /* backdrop-filter: blur(10px); */
+    }
+    
+    h1 {
+        color: aliceblue;
+        float: left;
+        margin-left: 40px;
+    }
+</style>
+<!--
+<script>
+	window.alert('警告')
+	document.write(Date());
+	console.log('取消')
+	var j8 = "8"
+</script>
+-->
+
+<body>
+    <!--
+	整数1：<input type="text" value="请输入"><br>0
+	整数2：<input type="text" value="请输入"><br>
+	<input type="button" value="相加">
+	<input type="button" value="相减">
+	<input type="button" value="相乘">
+	<input type="button" value="相除"><br>
+	结果：<input type="text" value="请输入">
+-->
+    <div id="aaa">
+        <input type="text" value="" id="result" readonly>
+        <input type="button" value="C" onClick="clearResult()">
+
+        <input type="button" value="7" onClick="app('7')">
+        <input type="button" value="8" onClick="app('8')">
+        <input type="button" value="9" onClick="app('9')">
+        <input type="button" value="/" onClick="app('/')">
+
+        <input type="button" value="4" onClick="app('4')">
+        <input type="button" value="5" onClick="app('5')">
+        <input type="button" value="6" onClick="app('6')">
+        <input type="button" value="*" onClick="app('*')">
+
+        <input type="button" value="1" onClick="app('1')">
+        <input type="button" value="2" onClick="app('2')">
+        <input type="button" value="3" onClick="app('3')">
+        <input type="button" value="+" onClick="app('+')">
+
+        <input type="button" value="." onClick="app('.')">
+        <input type="button" value="0" onClick="app('0')">
+        <input type="button" value="-" onClick="app('-')">
+        <input type="button" value="=" onClick="calculate()">
+        <input type="button" value="换背景" onClick="bj()">
+        <input type="button" value="退格" onClick="tuige()">
+		<input type="button" value="透明+" onClick="toujia()">
+		<input type="button" value="透明-" onClick="toujian()">
+        <div>
+<!--            <h1>©XZ计算器</h1>-->
+        </div>
+
+    </div>
+    <script>
+        //		function app(value) {
+        //      		document.getElementById('result').value += value; // 将按钮的值追加到结果输入框中
+        //    	}
+        function app(value) {
+            let resultInput = document.getElementById('result'); //获取输出框
+            let texta = resultInput.value; //获取输出框
+            let jz = resultInput.value.slice(-1); // 获取输出框中的最后一个字符
+            if (value === ".") { //如果点击点号
+                if (texta === "") { //如果结果框是""
+                    document.getElementById('result').value = '0.'; //就会输出0.
+                }
+            }
+
+            if (jz === '+' || jz === '-' || jz === '*' || jz === '/' || jz === '.' || jz === '') { //如果最后一个字符是+-*/.
+                if (value === '+' || value === '-' || value === '*' || value === '/' || value === '.') { //如果点击的是+-*/.
+                    return; // 最后一个字符是加减乘除点符号且当前输入为加减乘除点，则不进行追加操作
+                }
+            }
+            resultInput.value += value; // 将按钮的值追加到结果输入框中
+        }
+
+        function tuige() { //退格操作
+            var resultInput = document.getElementById('result'); //获取输出框
+            var texta = resultInput.value;//获取输出框的值
+            var tui = texta.slice(0,-1); //使用slice方法删除最后一个字符
+            resultInput.value = tui;//更新输出框的值为删除最后一个字符的字符串
+        }
+
+        function calculate() { //计算操作
+            let expression = document.getElementById('result').value; // 获取结果输入框中的表达式
+            let result = eval(expression); // 使用eval()函数计算结果
+            document.getElementById('result').value = result; // 将计算结果显示在结果输入框中
+        }
+
+        function clearResult() { //清空操作
+            document.getElementById('result').value = ''; // 清空结果输入框的值
+        }
+		
+		
+		var currentIndex = 0;  // 当前图片索引
+		var imageUrls = ['img/1img.jpg', 'img/2img.jpg', 'img/3img.jpg', 'img/4img.jpg', 'img/5img.jpg', 'img/6img.jpg', 'img/7img.jpg', 'img/8img.jpg', 'img/9img.jpg', 'img/10img.jpg', 'img/11img.jpg', 'img/12img.jpg', 'img/13img.jpg', 'img/14img.jpg', 'img/15img.jpg', 'img/16img.jpg', 'img/17img.jpg', 'img/18img.jpg', 'img/19img.jpg', 'img/20img.jpg', 'img/21img.jpg']
+
+//		  	'img/wallhaven-1p23r3.jpg',
+//			'img/wallhaven-85jo31.jpg',
+//			'img/wallhaven-l8dmz2.jpg',
+//			'img/wallhaven-l8jojq.jpg',
+//			'img/wallhaven-5gm6z9.jpg',
+//			'img/wallhaven-d6de5j.jpg',
+//			'img/wallhaven-859q1j.jpg',
+		  // 图片URL数组
+
+		function bj() {
+		  	var divElement = document.getElementById('aaa');
+
+		  	// 更新当前索引为下一张图片索引
+		  	currentIndex = (currentIndex + 1) % imageUrls.length;
+
+		  	// 切换到下一张图片
+		  	divElement.style.backgroundImage = 'url("' + imageUrls[currentIndex] + '")';
+		}
+		
+		function toujia() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                var opacity = parseFloat(input.style.opacity);
+                if (isNaN(opacity)) {
+                    opacity = 1; // 如果没有设置过透明度，默认为1
+                }
+                if (opacity < 1) {
+                    opacity += 0.1; // 增加透明度的步长
+                    input.style.opacity = opacity;
+                }
+            }
+        }
+
+        function toujian() {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                var opacity = parseFloat(input.style.opacity);
+                if (isNaN(opacity)) {
+                    opacity = 1; // 如果没有设置过透明度，默认为1
+                }
+                if (opacity > 0) {
+                    opacity -= 0.1; // 减少透明度的步长
+                    input.style.opacity = opacity;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

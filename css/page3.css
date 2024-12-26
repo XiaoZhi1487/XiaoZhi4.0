@@ -1,0 +1,101 @@
+/* 主列表样式 */
+#catListDisplay {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 列表项样式 */
+#catListDisplay div {
+    width: auto;
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* 列表项悬停效果 */
+#catListDisplay div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 列表项中的文本样式 */
+#catListDisplay div span {
+    padding: 2px;
+    width: 70%;
+}
+
+/* 列表项中的按钮样式 */
+#catListDisplay div button {
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    width: 200px;
+}
+
+/* 编辑按钮样式 */
+.edit-btn {
+    background-color: rgba(224, 224, 224, 0.8);
+}
+
+/* 编辑按钮悬停效果 */
+.edit-btn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/* 删除按钮样式 */
+.delete-btn {
+    background-color: rgba(244, 67, 54, 0.8);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 删除按钮悬停效果 */
+.delete-btn:hover {
+    background-color: rgba(244, 67, 54, 1);
+}
+
+/* 编辑按钮、删除按钮和确认按钮的宽度 */
+.edit-btn, .delete-btn, .qd_btn {
+    width: 200px;
+}
+
+/* 输入框样式 */
+.inp {
+    /* font-size: 20px; */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 输入框悬停效果 */
+.inp:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.inp:active{
+    background-color: rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease-in-out;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+/* 容器中的按钮样式 */
+.container button {
+    cursor: pointer;
+}
+
+/* 点击时无样式 */
+.container button:active {
+    background-color: rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease-in-out;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+	transition: box-shadow 0.3s ease-in-out;
+}

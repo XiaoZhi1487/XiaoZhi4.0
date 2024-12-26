@@ -1,0 +1,372 @@
+/* 全局样式 */
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* 链接样式 */
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 页面布局 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+/* 视频背景 */
+.video {
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    /* filter: blur(5px); */
+}
+
+/* 内容主体 */
+#zhu {
+    margin: 10vh 0 0 10vw;
+    width: 80%;
+    height: 80%;
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
+    float: left;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 侧边栏 */
+.cebianlan {
+    width: 200px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 个人部分 */
+.geren {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+/* 头像 */
+.touxiang {
+    margin-top: 30px;
+    width: 70px;
+    border-radius: 50px;
+    border: rgba(0, 0, 0, 0.5) solid 2px;
+}
+
+.touxiang:hover {
+    cursor: pointer;
+}
+
+/* 快速旋转动画 */
+.bounce-fast {
+    animation: rotate360 7s infinite linear;
+}
+
+/* 定义旋转动画 */
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 名字 */
+.name {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* 个性签名 */
+.gxqm {
+    width: 180px;
+    height: 30px;
+    padding: 3px;
+}
+
+/* 导航栏 */
+.daohang {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.daohang a {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.daohang hr {
+    margin: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    border-top: 1px dashed #00000088;
+}
+
+.daohang a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.daohang a:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+}
+
+/* 导航栏图标 */
+.i_dh {
+    display: inline-block;
+    padding-left: 32px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 32px 32px;
+    line-height: 45px;
+    font-size: 23px;
+}
+
+.i_dh.home {
+    background-image: url('../img/首页.png');
+}
+
+.i_dh.link {
+    background-image: url('../img/链接.png');
+}
+
+.i_dh.link_management {
+    background-image: url('../img/链接管理.png');
+}
+
+.i_dh.resource_download {
+    background-image: url('../img/下载.png');
+}
+
+.i_dh.contact {
+    background-image: url('../img/联系方式.png');
+}
+
+.i_dh.wz {
+    background-image: url('../img/文章.png');
+}
+
+.i_dh.wz_management {
+    background-image: url('../img/文章管理.png');
+}
+
+.i_dh.baidu {
+    background-image: url('../img/百度.png');
+}
+
+.switch-button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+/* 内容区域 */
+.btandnr {
+    transform: translateY(100%);
+    transition: transform 1s;
+    margin-left: 200px;
+    height: 100%;
+    width: calc(100% - 200px);
+}
+
+/* 标题 */
+.biaoti {
+    width: auto;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 100px;
+}
+
+.bt {
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+/* 内容容器 */
+.container {
+    /* display: flex; */
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 20px 110px 20px;
+    height: 100%;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.container_h {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* 隐藏默认滚动条样式 */
+.container::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+/* 设置滚动条滑块的样式 */
+.container::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+/* 设置滚动条轨道的样式 */
+.container::-webkit-scrollbar-track {
+    /* margin-bottom: 100px; */
+    background-color: #5e5e5e;
+}
+
+
+/* 头像部分 */
+#touxiang {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#touxiang img {
+    margin: 100px 0 0 0;
+}
+
+/* 动画效果 */
+.animate {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 成功提示 */
+#success-alert {
+    position: fixed;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(45, 255, 45, 0.5);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+/* 错误提示 */
+#error-alert {
+    position: fixed;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(255, 43, 43, 0.6);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+}
+
+/* 刷新按钮 */
+#refresh-btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+    margin: 30px 30px 0 0;
+    border: none;
+}
+
+#refresh-btn:hover {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+#refresh-btn:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+}
+
+/* 数据库按钮 */
+.sjk_button {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* 页脚 */
+.page-footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.425);
+    /* border: 3px solid rgba(0, 0, 0, 0.582); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    
+}
+
+.page-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.page-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}

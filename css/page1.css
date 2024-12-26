@@ -1,0 +1,87 @@
+/* Carousel Styles */
+#carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: -10px 0;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+
+
+
+
+/* 欢迎词样式 */
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.welcome-message {
+    font-size: 5em;
+    font-weight: bold;
+    color: #eeeeee;
+    opacity: 0;
+    width: 530px;
+    animation: fadeIn 1s ease-in-out forwards, fadeOut 1s ease-in-out 2s forwards;
+    /* 文字描边 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    /* margin-top: 20px; */
+}

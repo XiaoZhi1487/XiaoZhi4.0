@@ -1,0 +1,129 @@
+#article-form input, #article-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+#article-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#article-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 文章部分 */
+#article-list{
+    /* 弹性盒子 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+
+
+}
+
+#article-view{
+    margin-bottom: 30px;
+    /* 文章背景样式 */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px 50px;
+}
+
+#article-view h2{
+    /* 居中文字居中 */
+    text-align: center;
+}
+
+#view-content{
+    font-size: 18px;
+}
+
+
+
+.article-item {
+    /* margin-bottom: 10px; */
+    background-color: rgba(255, 255, 255, 0.313);
+    /* background: blur(5px); */
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.article-item:hover {
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.article-item:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+}
+
+.article-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.article-item button:hover {
+    background-color: #0056b3;
+}
+
+#comments-section {
+    margin-top: 20px;
+}
+
+#comments-section input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+#comments-section button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#comments-section button:hover {
+    background-color: #218838;
+}
+
+#article-form {
+    margin-top: auto;
+  }
+
+  .article-date {
+    font-size: 12px;
+    color: #555;
+    margin-top: -1px;
+    text-align: right;
+}
+

@@ -1,0 +1,174 @@
+/* 新样式.css */
+body {
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#zhu {
+    margin: 0% 0 0 0;
+    /* padding: 20px; */
+    background-color: #eeeeee;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+	height: 100%;
+}
+
+.video{
+    backdrop-filter: blur(8px);
+    /* border-color: #eeeeee; */
+}
+
+.cebianlan {
+    background-color: #222831;
+    /* padding: 15px; */
+    border-radius: 0 10px 10px 0;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    color: #eeeeee;
+    /* 右阴影 */
+}
+
+.touxiang {
+    border: 2px solid #eeeeee;
+    margin: 0;
+}
+
+.name {
+    color: #eeeeee;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.biaoti {
+    background-color: #393e46;
+    color: #eeeeee;
+    padding: 10px;
+    border-radius: 8px;
+
+    display: none;
+}
+
+.container {
+    /* background-color: #ffffff; */
+    padding: 30px 20px 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: #eeeeee;
+    border: 1px solid #222831;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    background-color: #393e46;
+    box-shadow: 3 3 15px rgba(0, 0, 0, 0.3);
+}
+
+#success-alert {
+    background-color: #4caf50;
+}
+
+#error-alert {
+    background-color: #f44336;
+}
+
+.inp{
+    background: #eeeeee;
+    border: 1px solid #222831;
+}
+.inp:hover{
+    background: #dfdfdf;
+    border: 1px solid #393e46;
+}
+
+.geren{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.name{
+    margin: 0;
+}
+
+#refresh-btn{
+    border: 2px solid #222831;
+    background: #eeeeee;
+
+}
+/* 导航 */
+.daohang {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+    color: #1b1b1b;
+	/* gap: 10px; */
+}
+.daohang a{
+    padding-left: 20px;
+    width: 80%;
+}
+.daohang hr{
+    margin: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px dashed #eeeeee;
+}
+
+.daohang i{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.daohang a:hover{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+	color: #111111;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+	border-radius: 5px;
+	background-color: #111111;
+	transition: background-color 0.3s ease-in-out;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+	transition: box-shadow 0.3s ease-in-out;
+	border-radius: 5px;
+	
+}
+
+#jsonData{
+    background-color: #eeeeee;
+}
+
+#jsonData:hover{
+    background-color: #dfdfdf;
+}
+
+.sjk_button{
+    background-color: #eeeeee;
+    border: 1px solid #222831;
+}
+
+.sjk_button:hover{
+    background-color: #dfdfdf;
+}
+
+#catListDisplay{
+    background-color: #eeeeee;
+    border: 1px solid #222831;
+}
+
+#catListDisplay div:hover{
+    background-color: #dfdfdf;
+    border: 1px solid #393e46 ;
+}
+
+.wz_title{
+    font-size: 28px;
+    font-weight: bold;
+}
+
